@@ -51,6 +51,7 @@
             font-family: Arial, Helvetica, sans-serif;
             border-radius: 10px;
             position: absolute;
+            
         }
         
         tr {
@@ -75,6 +76,7 @@
         td {
             border: 1px solid #889ec7;
             font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 5px;
         }
         /*折疊為單一編框 */
         
@@ -108,6 +110,8 @@
                 <li>選課系統 3</li>
                 <li>我的課程表</li>
             </ul>
+
+
         </aside>
 
         <main>
@@ -192,11 +196,32 @@
             </div>
 
 
-
-
         </main>
     </div>
-    <footer></footer>
+    <footer>
+        <!-- Default dropup button -->
+<div class="btn-group dropup">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropup
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </div>
+  </div>
+  
+  <!-- Split dropup button -->
+  <div class="btn-group dropup">
+    <button type="button" class="btn btn-secondary">
+      Split dropup
+    </button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </div>
+  </div>
+    </footer>
 
 </body>
 
