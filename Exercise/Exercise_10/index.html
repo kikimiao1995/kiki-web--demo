@@ -33,38 +33,35 @@
             height: 200px;
         }
         /* 請在此加入更多 style */
-        /*
-        td {
-            background-image: url(https://i.imgur.com/ulrYqt9.jpg);
-            z-index:-1;
-        }
-        */
-        tbody {
+       
+        table {
             background-image: 
                 url(https://i.imgur.com/OSR7RNT.gif),
-                url(https://i.imgur.com/FR8QCdJ.gif),
-                url(https://i.imgur.com/wivmnTul.png),
                 url(https://i.imgur.com/ulrYqt9.jpg);
 
-            background-position:bottom,
-                                center,
-                                center;
-
-            background-repeat: repeat-x,
-                               no-repeat,
-                               no-repeat,
-                               repeat;
+            background-position:bottom left;       
+            background-repeat: repeat-x,repeat;
                                
-            background-size: 200px 200px,
-                             200px 200px,
-                             200px 200px,
-                             200px 200px;
-            
-        
-
-
-                    
+            background-size: 100px 100px,
+                             200px 200px;        
         }
+
+        table tr:nth-child(2) td:nth-child(2) {
+            background-image: 
+                url(https://i.imgur.com/FR8QCdJ.gif),
+                url(https://i.imgur.com/wivmnTul.png);
+            background-size: 
+                200px 200px,
+                210px 210px;
+            background-repeat: 
+                no-repeat
+                no-repeat;
+            background-position: 
+                center,
+                center;
+        }
+
+
     </style>
 </head>
 

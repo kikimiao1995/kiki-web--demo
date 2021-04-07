@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-size: 3rem;
+            margin:0%
+        }
+        header {
+            background-color: wheat;
+        }
+        
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+        }
+
+        main {
+            background-color: teal;
+            flex-grow: 4;
+        }
+
+        aside {
+            background-color: whitesmoke;
+            flex-grow: 1;
+        }
+
+        footer {
+            background-color: wheat;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>全端工程師初學課表</header>
+    <div class="content">
+        <aside></aside>
+        <main>
+
+
+
+            
+        </main>
+    </div>
+    <footer></footer>
+    
+</body>
+</html>
+<!--只處理一層-->
+<!--flex只會flex對象本身，
+    裡面的東西不會隨之改變，
+    要把需要當作容器的東西，
