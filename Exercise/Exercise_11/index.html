@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,85 @@
 
     <style>
         /*無邊界怎麼用*/
-        .body {
-            margin: 0ch;
+        
+        body {
+            min-height: 100vh;
+            margin: 0cm;
         }
-
+        
         .black {
             background-color: rgb(41, 39, 39);
             height: 40px;
         }
-
-        /*要怎麼把商品跟購物車弄到右邊*/
+        /*橘色那欄*/
         nav {
             display: flex;
-            background-color:rgb(255, 115, 0);
-            
-        }        
-        nav>.item1 {
-            flex:none;
-            padding: 15px;         
+            background-color: rgb(255, 115, 0);
         }
+        
+        nav>.item1 {
+            flex: none;
+            padding: 15px;
+        }
+        
         nav>.item2 {
-            flex:none;
+            flex: none;
             padding: 15px;
             justify-content: flex-end;
             text-align: right;
         }
+        /*中間那層*/
         
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        /*左邊的側邊欄*/
+
+        aside {
+            display: flex;
+            flex-grow: 1;
+            background-color: hotpink;
+            flex-direction: column;
+            flex-direction: flex-end;
+        }
+        
+        aside>div {
+            width: 100px;
+            height: 50px;
+            padding:10px;
+        }
+
+        /*右邊的菜單*/
+        main {
+            display: flex;
+            flex-grow: 4;
+            flex-wrap: wrap;
+        }
+        .menu {   
+            width: 250px;
+            height: 350px;
+            border: 2px rgba(128, 128, 128, 0.726) solid;
+            margin: 15px;
+        }
+        .button {
+            display: flex;
+            justify-content: space-around;
+        }
+        #btn {
+            border:1px solid #888888;
+            background-color:#e9e3e3dc;
+            padding: 5px;
+            border-radius:4px;
+            
+        }
+        .price {
+            font-size: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+
 
 
 
@@ -42,35 +96,104 @@
             vertical-align: baseline;
             text-align: center;
         }
-
-
-
     </style>
 
 
 
 </head>
+
 <body>
-    <div class="black">  </div>
+    <div class="black"> </div>
     <nav>
         <div class="item1">MyShop</div>
         <div class="item2">商品</div>
         <div class="item2">購物車</div>
     </nav>
-    
-    <div>
+
+    <div class="container">
         <aside>
-            
+            <div>商品分類</div>
+            <div>所有商品</div>
+            <div>暢銷商品</div>
+            <div>本日精選</div>
+            <div>新品上市</div>
         </aside>
 
+        <main>
+            <div class="menu">
+                <div>
+                    <img src="https://kikmiao1995.github.io/kiki-web--demo/image/cake.jpg" width=250px height=250px alt="cake">
+                </div>
+                <div class="button">
+                    <div>蛋糕</div>
+                    <div>
+                        <button id="btn">加入購物車</button>
+                    </div>
+                </div>
+                <div class="price">NT$150</div>
+        
+            </div>
 
+            <div class="menu">
+                <div>
+                    <img src="https://kikmiao1995.github.io/kiki-web--demo/image/drink.jpg" width=250px height=250px alt="drink">
+                </div>
+                <div class="button">
+                    <div>滿滿的點心</div>
+                    <div>
+                        <button id="btn">加入購物車</button>
+                    </div>
+                </div>
+                <div class="price">NT$300</div>
+        
+            </div>
 
+            <div class="menu">
+                <div>
+                    <img src="https://kikmiao1995.github.io/kiki-web--demo/image/red_cake.jpg" width=250px height=250px alt="Mickey cake">
+                </div>
+                <div class="button">
+                    <div>紅色的</div>
+                    <div>
+                        <button id="btn">加入購物車</button>
+                    </div>
+                </div>
+                <div class="price">NT$666</div>
+        
+            </div>
 
+            <div class="menu">
+                <div>
+                    <img src="https://kikmiao1995.github.io/kiki-web--demo/image/cake2.jpg" width=250px height=250px alt="cheese cake">
+                </div>
+                <div class="button">
+                    <div>蛋糕</div>
+                    <div>
+                        <button id="btn">加入購物車</button>
+                    </div>
+                </div>
+                <div class="price">NT$85</div>
+        
+            </div>
 
+            <div class="menu">
+                <div>
+                    <img src="https://kikmiao1995.github.io/kiki-web--demo/image/cube_cake.jpg" width=250px height=250px alt="cube cake">
+                </div>
+                <div class="button">
+                    <div>魔術方塊？</div>
+                    <div>
+                        <button id="btn">加入購物車</button>
+                    </div>
+                </div>
+                <div class="price">NT$999</div>       
+            </div>          
+        </main>
     </div>
 
     <footer>©2021 MyShop All rights reserved</footer>
-    <div class="black">  </div>
+    <div class="black"> </div>
 
 </body>
+
 </html>
