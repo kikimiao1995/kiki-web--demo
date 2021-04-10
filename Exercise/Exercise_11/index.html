@@ -19,35 +19,33 @@
             background-color: rgb(41, 39, 39);
             height: 40px;
         }
-        /*橘色那欄*/
+        /* nav 橘色那欄*/
         nav {
             display: flex;
             background-color: rgb(255, 115, 0);
         }
-        
-        nav>.item1 {
-            flex: none;
+        .nav_left {
             padding: 15px;
         }
         
-        nav>.item2 {
-            flex: none;
-            padding: 15px;
+        .nav_right {
+            display:flex;
             justify-content: flex-end;
-            text-align: right;
+            align-items: center;
+        }
+        .item2 {
+            padding: 15px;
+            color: blue;
         }
         /*中間那層*/
         
         .container {
             display: flex;
-            justify-content: center;
         }
-
         /*左邊的側邊欄*/
-
         aside {
+            flex-grow: 2; /*為什麼不會照比例變動*/
             display: flex;
-            flex-grow: 1;
             background-color: rgb(230, 175, 202);
             flex-direction: column;
             flex-direction: flex-end;
@@ -57,17 +55,25 @@
         aside>div {
             width: 100px;
             height: 50px;
-            padding:10px;
+            padding:6px;
             border-collapse: collapse;
             border:3px gray dotted;
-            
-        }
+            border-top: none;
+            color: blue;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
 
+        }
+        .head {
+            border: 3px solid gray;
+            color: black;
+        }
         /*右邊的菜單*/
         main {
-            display: flex;
-            flex-grow: 4;
+            flex-grow: 5;
             flex-wrap: wrap;
+            display: flex;
         }
         .menu {   
             width: 250px;
@@ -109,14 +115,16 @@
 <body>
     <div class="black"> </div>
     <nav>
-        <div class="item1">MyShop</div>
-        <div class="item2">商品</div>
-        <div class="item2">購物車</div>
+        <div class="nav_left">MyShop</div>
+        <div class= "nav_right">
+            <div class="item2">商品</div>
+            <div class="item2">購物車</div>
+        </div>
     </nav>
 
     <div class="container">
         <aside>
-            <div>商品分類</div>
+            <div class="head">商品分類</div>
             <div>所有商品</div>
             <div>暢銷商品</div>
             <div>本日精選</div>

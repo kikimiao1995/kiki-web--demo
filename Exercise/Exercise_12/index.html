@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise_12</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0ch;
+            display: grid;
+            grid-template-rows: 40px 50px 1fr 30px 40px;
+            grid-template-columns: 1.6fr 4fr;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .upper_frame {
+            background-color: rgb(39, 37, 36);
+            grid-area: 1/1/2/5;
+        }
+        /* 橘色的nav */
+        .left {
+            background-color: rgba(255, 115, 0, 0.966);
+            grid-area: 2/1/3/2;
+            padding: 15px 15px 15px 30px; /* -top -right -bottom -left  */
+        }
+        .right{
+            background-color: rgba(255, 115, 0, 0.966);
+            grid-area: 2/2/3/3;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .right>div {
+            padding: 15px;
+            color: blue;
+        }
+        /*側邊欄*/
+        aside {
+            background-color: rgb(248, 250, 250);
+            grid-area: 3/1/4/2;
+            display: grid;
+            justify-content:end;
+            margin: 15px;
+
+        }
+        aside>div {
+            border: 3px dashed grey ;
+            border-top: none;
+            height: 62.5px;
+            width: 110px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 60px;
+            color: blue;
+            
+        }
+        .head {
+            border:3px solid grey ;
+            color: black;
+        }
+        /*右邊商品欄*/
+        main {
+            background-color: rgb(176, 230, 223);
+            grid-area: 3/2/4/3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,250px);
+            column-gap: 20px;
+        }
+        .menu {
+            width: 250px;
+            height: 350px;
+            border: 2px rgba(128, 128, 128, 0.726) solid;
+            margin: 15px;
+        } 
+        .button {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 5px;
+
+        }
+        footer {
+            background-color: rgb(148, 146, 146);
+            grid-area: 4/1/5/5;
+            text-align: center;
+            line-height: 30px;
+            font-size: 12px;
+        }
+
+        .lower_frame {
+            background-color:rgb(39, 37, 36);
+            grid-area: 5/1/6/5;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="upper_frame"></div>
+    <nav class="left">MyShop</nav>
+    <nav class="right">
+        <div>商品</div>
+        <div>購物車</div>
+    </nav>
+
+    <aside>
+        <div class="head">商品分類</div>
+        <div>所有商品</div>
+        <div>暢銷商品</div>
+        <div>本日精選</div>
+        <div>新品上市</div>
+    </aside>
+    <main>
+        <div class="menu">
+            <div>
+                <img src="https://kikmiao1995.github.io/kiki-web--demo/image/cake.jpg" width=250px height=250px alt="cake">
+            </div>
+            <div class="button">
+                <div>蛋糕</div>
+                <div>
+                    <button id="btn">加入購物車</button>
+                </div>
+            </div>
+            <div class="price">NT$150</div>
+    
+        </div>
+
+        <div class="menu">
+            <div>
+                <img src="https://kikmiao1995.github.io/kiki-web--demo/image/drink.jpg" width=250px height=250px alt="drink">
+            </div>
+            <div class="button">
+                <div>滿滿的點心</div>
+                <div>
+                    <button id="btn">加入購物車</button>
+                </div>
+            </div>
+            <div class="price">NT$300</div>
+    
+        </div>
+
+        <div class="menu">
+            <div>
+                <img src="https://kikmiao1995.github.io/kiki-web--demo/image/red_cake.jpg" width=250px height=250px alt="Mickey cake">
+            </div>
+            <div class="button">
+                <div>紅色的</div>
+                <div>
+                    <button id="btn">加入購物車</button>
+                </div>
+            </div>
+            <div class="price">NT$666</div>
+    
+        </div>
+
+        <div class="menu">
+            <div>
+                <img src="https://kikmiao1995.github.io/kiki-web--demo/image/cake2.jpg" width=250px height=250px alt="cheese cake">
+            </div>
+            <div class="button">
+                <div>蛋糕</div>
+                <div>
+                    <button id="btn">加入購物車</button>
+                </div>
+            </div>
+            <div class="price">NT$85</div>
+    
+        </div>
+
+        <div class="menu">
+            <div>
+                <img src="https://kikmiao1995.github.io/kiki-web--demo/image/cube_cake.jpg" width=250px height=250px alt="cube cake">
+            </div>
+            <div class="button">
+                <div>魔術方塊？</div>
+                <div>
+                    <button id="btn">加入購物車</button>
+                </div>
+            </div>
+            <div class="price">NT$999</div>       
+        </div>    
+
+
+    </main>
+    <footer>©2021 MyShop All rights reserved</footer>
+    <div class="lower_frame"></div>
+</body>
+</html>
