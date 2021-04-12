@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise_06</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-rows: 55px 300px 1fr 300px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+        }
+        nav {
+            grid-area: 1/1/2/5;
+            background-color: rgb(206, 105, 105);
+        }
+        header {
+            grid-area: 2/1/3/5;
+            background-color: darkgrey;
+        }
+        .left {
+            grid-area: 3/1/5/3;
+            background-color: darkseagreen;
+        }
+        .right {
+            grid-area: 3/3/5/5;
+            background-color: darkslateblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav></nav>
+    <header>1</header>
+    <div>
+        <div class="left">2</main>
+            <div class="right">3</main>
+                
+    </div>
+    
+    <footer>4</footer>
+
+
+</body>
+
+</html>
