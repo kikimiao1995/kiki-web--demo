@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#flip").click(function() {
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+        
+        aside {
+            grid-area: 1/1/2/2;
+        }
+        
+        #panel {
+            padding: 5px;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+        
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+        
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+        main {
+            grid-area: 1/2/3/4;
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        <div id="flip">category</div>
+        <div id="panel">
+            <ul>
+                <li>古蹟</li>
+                <li>文化</li>
+                <li>美食</li>
+                <li>工藝</li>
+                <li>大自然</li>
+            </ul>
+        </div>
+    </aside>
+    <main>
+        <p>0</p>
+
+        <button id="add">+1</button>
+        <button id="minus">-1</button>
+
+    </main>
+
+
+    <script src="https://code.jquery.com/git/jquery-3.x-git.min.js">
+        ("#add").click(function() {
+            $("p").text(function(i, origText) {
+                return parseInt(origText) + 1;
+            });
+        });
+
+        $("#minus").click(function() {
+            $("p").text(function(i, origText) {
+                return parseInt(origText) - 1;
+            });
+        });
+    </script>
+</body>
+
+</html>

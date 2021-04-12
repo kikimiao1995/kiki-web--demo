@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我是標題</title>
+    <title>Document</title>
 </head>
 
-
 <body>
-    <a href="#anchor">Go to anchor</a>
+    <p>0</p>
+
+    <button id="add">+1</button>
+    <button id="minus">-1</button>
 
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $("#add").click(function() {
+            $("p").text(function(i, origText) {
+                return parseInt(origText) + 1;
+            });
+        });
 
-<h1 id="anchor">Some text</h1>
-
-<table border="1">
-    <tr>
-      <td>1</td>
-      <td colspan="2">2</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td rowspan="2">5</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-  </table>
-  
+        $("#minus").click(function() {
+            $("p").text(function(i, origText) {
+                return parseInt(origText) - 1;
+            });
+        });
+    </script>
 
 </body>
+
 </html>
