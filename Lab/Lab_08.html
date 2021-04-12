@@ -1,15 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Lab_07</title>
+    <!-- Bootstrap CSS part ：置於head tag中-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--Font Awesome css part: 置於head tag中-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        header {
+            background-color: rgb(94, 15, 15);
+            color: seashell;
+            padding: 50px;
+            font-size: 20px;
+        }
+        
+        .classlink {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        main {
+            background-color: whitesmoke;
+            flex-grow: 5;
+        }
+        
+        aside {
+            background-color: rgb(241, 224, 145);
+            flex-grow: 1;
+        }
+        
+        footer {
+            background-color: wheat;
+        }
+        /*table*/
+        
+        table {
+            width: 70vw;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+            position: absolute;
+            
+        }
+        
+        tr {
+            text-align: center;
+        }
+        
+        th {
+            background-color: rgb(29, 97, 243);
+            color: rgb(245, 233, 75)
+        }
+        
+        .content {
+            background-color: paleturquoise;
+        }
+        
+        .divider {
+            background-color: rgb(233, 204, 141);
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid #889ec7;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 5px;
+        }
+        /*折疊為單一編框 */
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        main div {
+            padding: 30px;
+        }
+    </style>
 </head>
-<!--將「Lab_07.html」複製出另一份「Lab_08.html」
-請試著利用 FontAwesome 為頁面加些圖示作為點綴
--->
 <body>
+    <header>
+        課程資訊及選課系統
+    </header>
+    <div class="classlink">
+        <aside>
+
+
+            <ul>
+                <li>課程地圖</li>
+                <li>選課系統 1</li>
+                <li>選課系統 2</li>
+                <li>選課系統 3</li>
+                <li>我的課程表</li>
+            </ul>
+
+
+        </aside>
+
+        <main>
+            <div>
+                <table>
+                    <caption>100學年 第一學期</caption>
+                    <thead>
+                        <tr>
+                            <th> </th>
+                            <th>星期一</th>
+                            <th>星期二</th>
+                            <th>星期三</th>
+                            <th>星期四</th>
+                            <th>星期五</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="content">9:10</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                            <td>軟體工程專題</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                        </tr>
+                        <tr>
+                            <td class="content">10:10</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                            <td>軟體工程專題</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                        </tr>
+                        <tr>
+                            <td class="content">11:10</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                            <td>軟體工程專題</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                        </tr>
+                        <tr>
+                            <td class="divider">12:10</td>
+                            <td class="divider" colspan="5">午休</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td class="content">13:10</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                            <td>軟體工程專題</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                        </tr>
+                        <tr>
+                            <td class="content">14:10</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                            <td>軟體工程專題</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                        </tr>
+                        <tr>
+                            <td class="content">15:10</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                            <td>軟體工程專題</td>
+                            <td>python基礎程式設計</td>
+                            <td>web基礎程式設計</td>
+                        </tr>
+                        <tr>
+                            <td class="divider">16:10</td>
+                            <td class="divider" colspan="5">下課囉！</td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </main>
+    </div>
+    <footer>
+        <!-- Default dropup button -->
+<div class="btn-group dropup">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     怪怪der
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </div>
+  </div>
+  
+  <!-- Split dropup button -->
+  <div class="btn-group dropup">
+    <button type="button" class="btn btn-secondary">
+      還是怪怪的
+    </button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <!-- Dropdown menu links -->
+      <div>當技術跟不上創意</div>
+      <div>ＱＱ</div>
+      <div>只能</div>
+      <div>醜醜der</div>
+    </div>
+  </div>
+    </footer>
     
+    <!--Bootstrap Js part ：置於/body前-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!--Font Awesome js part: 置於 /body_tag之前-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
 </body>
+
 </html>
+
+
+
+
